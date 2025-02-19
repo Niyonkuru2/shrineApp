@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shrine/colors.dart';
 import 'package:shrine/login.dart';
+import 'package:shrine/backdrop.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shrine',
       theme: ThemeData(
-        useMaterial3: true, // Optional, Material 3 look
+        useMaterial3: true,
         colorScheme: const ColorScheme(
           primary: kShrinePink100,
           secondary: kShrinePink400,

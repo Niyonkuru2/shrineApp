@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shrine/home.dart';
-import 'package:shrine/colors.dart'; 
+import 'package:shrine/colors.dart';
 import 'package:shrine/login.dart';
 
 void main() {
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: kShrineBackgroundWhite,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

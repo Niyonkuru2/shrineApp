@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shrine/colors.dart';
+import 'package:shrine/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                   labelText: 'Username',
                 ),
               ),
-              const SizedBox(height: 20.0), // Controlled spacing
+              const SizedBox(height: 20.0),
               TextField(
                 decoration: const InputDecoration(
                   filled: true,
@@ -54,10 +56,21 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(width: 10.0),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {
-                        // TODO: Navigate to next page
-                      },
                       child: const Text('NEXT'),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: kShrineBrown900,
+                        backgroundColor: kShrinePink100,
+                        elevation: 8.0,
+                        shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                        ),
+                      ),
                     ),
                   ),
                 ],
